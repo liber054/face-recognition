@@ -1,0 +1,27 @@
+forehead
+
+[1;1;0];
+height=20:10:30
+width=Y-1:Y
+
+
+
+eyes+nose
+
+mask = [0;1];
+height=20:10:35
+width=Y/2:10:Y
+
+
+eyebrows
+mask = [0 1 0];
+height=5:10:15
+width=Y/2:10:Y
+
+
+lips
+
+mask = [1;0;0;1];
+height=20:5:26
+width=20:5:30
+pattern_feature(50, 1, help, mask, height, width);
