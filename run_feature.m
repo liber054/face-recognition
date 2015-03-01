@@ -1,13 +1,6 @@
 function  [ v,h, best_mask_sum ] = run_feature( help, feature )
-feature
-switch feature 
-    case 'forehead'
-        [mask, height, width, x_start, y_start] = forehead(help);
-    case 'eyes_nose'
-        [mask, height, width, x_start, y_start] = eyes_nose(help);
-    case 'lips'
-        [mask, height, width, x_start, y_start] = lips(help);
-end
+
+[mask, height, width, x_start, y_start] = feature_case(help,feature);
 
 best_mask_sum = -inf;
 
