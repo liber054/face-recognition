@@ -1,0 +1,14 @@
+
+for i=2:5
+    result(i-1) = im2features(strcat(num2str(i), '.jpg'));
+end
+disp(result);
+
+
+
+
+
+
+
+
+

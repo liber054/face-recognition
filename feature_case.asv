@@ -1,4 +1,4 @@
-function [mask, height, width, x_start, y_start] = feature_case(help, feature)
+function [mask, height, width, x_start, y_start] = feature_case(help, feature);
 
 
 switch feature 
