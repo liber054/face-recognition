@@ -9,7 +9,7 @@ result = zeros(1, size(features,2));
 for i=1:size(features,2)
     feature=features{i};
     
-    [result, h, best_mask_sum] = run_feature(help, feature);
+    [~, ~, best_mask_sum] = run_feature(help, feature);
    % figure;
    % imshow(im(result,h));
     result(i) = best_mask_sum;

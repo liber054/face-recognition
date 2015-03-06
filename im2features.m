@@ -1,6 +1,6 @@
 function result = im2features( file_name )
 im = imread(file_name);
-%im = rgb2gray(im);
+im = rgb2gray(im);
 im = im2double(im);
 rows = size(im,1);
 
@@ -19,8 +19,8 @@ for i=1:size(features,2)
     feature=features{i};
     
     [v, h, best_mask_sum] = run_feature(help, feature);
-    figure;
-    imshow(im(v,h));
+    %figure;
+    %imshow(im(v,h));
     result(i) = best_mask_sum;
 end
 
