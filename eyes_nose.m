@@ -5,7 +5,7 @@ mask = [0;1];
 height=20:10:31;
 width=Y/2:10:Y;
 
-x_start=1;
+x_start=20;
 y_start=1;
 
 end
