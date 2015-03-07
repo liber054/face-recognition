@@ -1,13 +1,13 @@
 function  [ v,h, best_mask_sum ] = run_feature( help, feature )
 
-[mask, height, width, x_start, y_start] = feature_case(help,feature);
+[mask, height, width, x_start, y_start, x_end, y_end] = feature_case(help,feature);
 
 best_mask_sum = -inf;
 
 for h=height
     for w=width
         
-        [mask_sum, top, left] = pattern_feature(x_start, y_start, help, mask, h, w);
+        [mask_sum, top, left] = pattern_feature(x_start, y_start, x_end,y_end, help, mask, h, w);
        
         if(mask_sum > best_mask_sum)
             
