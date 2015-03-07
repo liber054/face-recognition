@@ -1,6 +1,8 @@
 function result = im2features( file_name )
 im = imread(file_name);
-
+if(size(size(im),2) == 3)
+	im = rgb2grey(im);
+end
 im = im2double(im);
 rows = size(im,1);
 
