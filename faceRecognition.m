@@ -10,9 +10,13 @@ for x=1:50:X
             subim=im(x:x+100,y:y+70);
             v=subIm2features(subim);
             if (w*v'>0)
-                s=vision.ShapeInserter;
-                J=step(s,subim,int32([x,y,x+100,y+70]));
-                imshow(J);
+                plotRec(im,x,y,x+100,x+70);
+            end
+        else
+            subim=im(x:X,y:Y);
+            v=subIm2features(subim);
+            if (w*v'>0)
+                plotRec(im,x,y,x+100,x+70);
             end
         end
     end
@@ -21,5 +25,4 @@ end
 
 
 
-                
-                
+

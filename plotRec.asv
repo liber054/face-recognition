@@ -1,8 +1,0 @@
-function [im]=plotRec(im,x,y,height,width)
-
-shapeInserter = vision.ShapeInserter;
-rectangle = int32([x y width height]);
-im = step(shapeInserter, Im, rectangle);
-
-
-
