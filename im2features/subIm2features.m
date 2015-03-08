@@ -1,5 +1,5 @@
-function result = im2features( file_name )
-im = imread(file_name);
+function result=subIm2features(im)
+
 if(size(size(im),2) == 3)
 	im = rgb2gray(im);
 end
@@ -12,10 +12,6 @@ im = imresize(im, 100/rows);
 
 [X, Y] = size(im);
 
-if(Y > 86)
-    i = int32(Y/2 - 43);
-    im = im(:, i:i+86);
-end
 %integral image
 help = helpMatrix(im);
 
@@ -29,8 +25,8 @@ for i=1:size(features,2)
     
     [v, h, best_mask_sum] = run_feature(help, feature);
 
-    figure;
-    imshow(im(v,h));
+    %figure;
+    %imshow(im(v,h));
 
     result(i) = best_mask_sum;
 end
@@ -38,4 +34,3 @@ end
 
 
 end
-

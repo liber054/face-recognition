@@ -1,5 +1,5 @@
 face = importdata('p100.txt');
-nonface = importdata('n1002.txt');
+nonface = importdata('n100.txt');
 
 %combine skin and non_skin & seperating features from tags
 X = [ face(:,1:7); nonface(:,1:7) ];

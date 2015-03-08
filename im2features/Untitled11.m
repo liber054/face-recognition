@@ -1,7 +1,7 @@
 
 close all;
 clc;
-fileID = fopen('n1002.txt','wt');
+fileID = fopen('n100.txt','wt');
 
 for j=985:4070
     fprintf('file %d\n', j);

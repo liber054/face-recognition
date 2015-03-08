@@ -3,7 +3,7 @@ close all;
 clc;
 fileID = fopen('p100.txt','wt');
 
-for j=1:435
+for j=100:100
     fprintf('file %d\n', j);
     
     filename =sprintf('%04i', j);
